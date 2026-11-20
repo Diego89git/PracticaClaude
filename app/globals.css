@@ -1458,6 +1458,96 @@ a {
   padding: 12px;
   font-size: 9px;
 }
+/* SPEC 24: estados de auth y /cuenta */
+.auth-msg {
+  margin: 4px 0 10px;
+  padding: 10px 12px;
+  font-family: var(--pixel);
+  font-size: 8px;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  border: 1px solid currentColor;
+}
+.auth-msg.err {
+  color: var(--magenta);
+  background: rgba(255, 0, 110, 0.08);
+  text-shadow: 0 0 6px rgba(255, 0, 110, 0.45);
+}
+.auth-msg.ok {
+  color: var(--cyan);
+  background: rgba(0, 245, 255, 0.06);
+  text-shadow: 0 0 6px rgba(0, 245, 255, 0.45);
+}
+.auth-link {
+  display: inline-block;
+  margin: -2px 0 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-dim);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.auth-link:hover,
+.auth-link:focus-visible {
+  color: var(--cyan);
+}
+.auth-text {
+  margin: 0 0 14px;
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  text-align: center;
+}
+.auth-text strong {
+  color: var(--ink);
+  font-weight: 500;
+  word-break: break-all;
+}
+.cuenta-card {
+  width: min(520px, 100%);
+}
+.cuenta-nombre {
+  margin: 6px 0 4px;
+  font-family: var(--pixel);
+  font-size: clamp(20px, 6vw, 30px);
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+  text-align: center;
+  text-shadow:
+    0 0 6px rgba(0, 245, 255, 0.8),
+    0 0 22px rgba(0, 245, 255, 0.45);
+  word-break: break-all;
+}
+.cuenta-datos {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 14px;
+  margin: 14px 0 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.cuenta-datos dt {
+  color: var(--ink-faint);
+  letter-spacing: 0.16em;
+}
+.cuenta-datos dd {
+  margin: 0;
+  color: var(--ink);
+  word-break: break-all;
+}
+.cuenta-seccion {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.cuenta-seccion h3 {
+  margin: 0 0 12px;
+  font-family: var(--pixel);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--ink-dim);
+}
 
 /* ===== salón ===== */
 .av-hall {

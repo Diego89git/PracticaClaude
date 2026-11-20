@@ -1,9 +1,22 @@
 "use client";
 
-import { createContext, useCallback, useContext, useMemo, useSyncExternalStore } from "react";
+import type { User } from "@supabase/supabase-js";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { createClient } from "@/lib/supabase/client";
 
+// SPEC 24: la sesión es la de Supabase Auth. El invitado no tiene sesión (user === null).
 export interface Usuario {
-  name: string;
+  id: string; // auth.users.id
+  name: string; // user_metadata.username ("" si aún no lo eligió)
+  email: string;
+  provider: "email" | "google" | "github";
 }
 
 export interface ScoreEntry {
@@ -14,55 +27,71 @@ export interface ScoreEntry {
 
 interface SessionValue {
   user: Usuario | null;
-  login: (u: Usuario | null) => void;
-  signOut: () => void;
-  saveScore: (entry: ScoreEntry) => void;
+  cargando: boolean; // true hasta conocer la sesión inicial
+  signOut: () => Promise<void>;
+  refrescar: () => Promise<void>; // relee el usuario después de updateUser
+  saveScore: (entry: ScoreEntry) => void; // av_scores (placeholders), sin cambios
 }
 
-const USER_KEY = "av_user";
 const SCORES_KEY = "av_scores";
+const OLD_USER_KEY = "av_user"; // sesión falsa anterior a SPEC 24
 
-const listeners = new Set<() => void>();
-const emit = () => listeners.forEach((l) => l());
-const subscribe = (cb: () => void) => {
-  listeners.add(cb);
-  window.addEventListener("storage", cb);
-  return () => {
-    listeners.delete(cb);
-    window.removeEventListener("storage", cb);
+function aUsuario(u: User | null | undefined): Usuario | null {
+  if (!u) return null;
+  const username = u.user_metadata?.username;
+  const provider = u.app_metadata?.provider;
+  return {
+    id: u.id,
+    name: typeof username === "string" ? username : "",
+    email: u.email ?? "",
+    provider:
+      provider === "google" || provider === "github" ? provider : "email",
   };
-};
-
-const readRawUser = () => {
-  try {
-    return localStorage.getItem(USER_KEY);
-  } catch {
-    return null;
-  }
-};
+}
 
 const SessionContext = createContext<SessionValue | null>(null);
 
 export function SessionProvider({ children }: { children: React.ReactNode }) {
-  const raw = useSyncExternalStore(subscribe, readRawUser, () => null);
+  const [user, setUser] = useState<Usuario | null>(null);
+  const [cargando, setCargando] = useState(true);
 
-  const user = useMemo<Usuario | null>(() => {
+  useEffect(() => {
+    // Limpia la clave de la sesión falsa que pudiera quedar de antes.
     try {
-      return raw ? (JSON.parse(raw) as Usuario) : null;
-    } catch {
-      return null;
-    }
-  }, [raw]);
-
-  const login = useCallback((u: Usuario | null) => {
-    try {
-      if (u) localStorage.setItem(USER_KEY, JSON.stringify(u));
-      else localStorage.removeItem(USER_KEY);
+      localStorage.removeItem(OLD_USER_KEY);
     } catch {}
-    emit();
+
+    const supabase = createClient();
+    let activo = true;
+
+    supabase.auth.getUser().then(({ data }) => {
+      if (!activo) return;
+      setUser(aUsuario(data.user));
+      setCargando(false);
+    });
+
+    // No se llama a Supabase dentro del callback (puede bloquearse): se usa la sesión recibida.
+    const { data } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!activo) return;
+      setUser(aUsuario(session?.user));
+      setCargando(false);
+    });
+
+    return () => {
+      activo = false;
+      data.subscription.unsubscribe();
+    };
   }, []);
 
-  const signOut = useCallback(() => login(null), [login]);
+  const signOut = useCallback(async () => {
+    await createClient().auth.signOut();
+    setUser(null);
+  }, []);
+
+  const refrescar = useCallback(async () => {
+    const { data } = await createClient().auth.getUser();
+    setUser(aUsuario(data.user));
+  }, []);
 
   const saveScore = useCallback((entry: ScoreEntry) => {
     try {
@@ -72,9 +101,14 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
     } catch {}
   }, []);
 
-  const value = useMemo(() => ({ user, login, signOut, saveScore }), [user, login, signOut, saveScore]);
+  const value = useMemo(
+    () => ({ user, cargando, signOut, refrescar, saveScore }),
+    [user, cargando, signOut, refrescar, saveScore],
+  );
 
-  return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
+  return (
+    <SessionContext.Provider value={value}>{children}</SessionContext.Provider>
+  );
 }
 
 export function useSession() {
