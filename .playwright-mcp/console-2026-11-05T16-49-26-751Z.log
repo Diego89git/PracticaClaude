@@ -1,0 +1,4 @@
+[     119ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     132ms] [LOG] [HMR] connected @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[    8873ms] [ERROR] No se pudo guardar la puntuación {message: TypeError: fail, details: TypeError: fail
+    at window.fetch (eval at <anon…00/_next/static/chunks/_157twfx3iwz-6._.js:82:31), hint: , code: } @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:995

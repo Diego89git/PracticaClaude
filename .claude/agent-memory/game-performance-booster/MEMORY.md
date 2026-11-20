@@ -1,0 +1,6 @@
+- [Rendimiento ranaria](perf-ranaria.md) — 2026-11-18; fondo en OffscreenCanvas, 1210→682 llamadas/fotograma; glow neón (31/fotograma) pendiente
+- [Rendimiento asteroides](perf-asteroides.md) — 2026-11-18; dentro de presupuesto, sin cambios; glow por entidad en neón anotado
+- [Rendimiento caida](perf-caida.md) — 2026-11-18; fondo y cuadrícula en OffscreenCanvas, 182→69 llamadas/fotograma
+- [Rendimiento bloque-buster](perf-bloque-buster.md) — 2026-11-18; sin strings ni arrays por fotograma; 60 drawImage escalados pendientes
+- [Rendimiento serpentina](perf-serpentina.md) — 2026-11-18; fondo y rejilla en OffscreenCanvas, 85→17 llamadas; en navegador sin mejora medible
+- Entorno de medición (2026-11-18): el navegador de Playwright de este servidor no pasa de ~32 FPS ni en about:blank (refresco de la sesión remota). Usar el tiempo de CPU por fotograma (CDP `Performance.getMetrics` → `TaskDuration`/fotogramas) en lugar de FPS; el ruido entre ejecuciones es ±10–15 %.

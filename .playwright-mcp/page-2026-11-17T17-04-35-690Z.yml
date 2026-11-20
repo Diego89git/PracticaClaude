@@ -1,0 +1,58 @@
+- generic [active] [ref=f50e1]:
+  - generic [ref=f50e2]:
+    - navigation [ref=f50e3]:
+      - link "ARCADE VAULT" [ref=f50e4] [cursor=pointer]:
+        - /url: /
+      - link "Iniciar Sesión" [ref=f50e7] [cursor=pointer]:
+        - /url: /auth
+      - button "Menú" [ref=f50e8] [cursor=pointer]: ≡
+    - complementary [ref=f50e9]:
+      - generic [ref=f50e10]: MENÚ
+      - link "Inicio" [ref=f50e11] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f50e12] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f50e13] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f50e14]: Acerca de
+      - link "Iniciar Sesión" [ref=f50e15] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f50e17]: CRÉDITOS · 03
+    - main [ref=f50e18]:
+      - generic [ref=f50e19]:
+        - group "Apariencia del juego" [ref=f50e20]:
+          - generic [ref=f50e21]:
+            - button "CLÁSICO" [pressed] [ref=f50e22] [cursor=pointer]
+            - button "NEÓN" [ref=f50e23] [cursor=pointer]
+            - button "RETRO" [ref=f50e24] [cursor=pointer]
+          - generic [ref=f50e25]:
+            - button "CLARO" [ref=f50e26] [cursor=pointer]
+            - button "OSCURO" [pressed] [ref=f50e27] [cursor=pointer]
+        - generic [ref=f50e28]:
+          - generic [ref=f50e29]:
+            - generic [ref=f50e30]:
+              - generic [ref=f50e31]: Jugador
+              - generic [ref=f50e32]: INVITADO
+            - generic [ref=f50e33]:
+              - generic [ref=f50e34]: Puntuación
+              - generic [ref=f50e35]: "0"
+            - generic [ref=f50e36]:
+              - generic [ref=f50e37]: Nivel
+              - generic [ref=f50e38]: "01"
+          - generic [ref=f50e39]:
+            - button "PAUSA" [ref=f50e40] [cursor=pointer]
+            - button "FIN" [ref=f50e41] [cursor=pointer]
+            - link "REGRESAR" [ref=f50e42] [cursor=pointer]:
+              - /url: /juegos/serpentina
+        - img "Juego SERPENTINA" [ref=f50e46]
+    - contentinfo [ref=f50e47]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - generic [ref=f50e52] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f50e53]
+    - generic [ref=f50e57]:
+      - button "Open issues overlay" [ref=f50e58]:
+        - generic [ref=f50e59]:
+          - generic [aria-hidden] [ref=f50e60]: "0"
+          - generic [ref=f50e61]: "1"
+        - generic [ref=f50e62]: Insight
+      - button "Collapse issues badge" [ref=f50e63]
+  - alert [ref=f50e66]

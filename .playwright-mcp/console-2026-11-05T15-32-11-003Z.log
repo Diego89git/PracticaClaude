@@ -1,0 +1,10 @@
+[      58ms] [LOG] [Fast Refresh] done in 6ms @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     126ms] [LOG] [Fast Refresh] done in 6ms @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     195ms] [LOG] [Fast Refresh] done in 6ms @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     266ms] [LOG] [Fast Refresh] done in 6ms @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     335ms] [LOG] [Fast Refresh] done in 6ms @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     407ms] [LOG] [Fast Refresh] done in 6ms @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     504ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[     517ms] [LOG] [HMR] connected @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:719
+[   10318ms] [ERROR] No se pudo guardar la puntuación {message: TypeError: Failed to fetch, details: TypeError: Failed to fetch
+    at window.fetch (ev…0/_next/static/chunks/_0j-gudpjpkeqa._.js:220:31), hint: , code: } @ http://localhost:3100/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:995

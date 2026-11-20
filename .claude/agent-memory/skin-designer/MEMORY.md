@@ -1,0 +1,3 @@
+- [Skins asteroides](skins-asteroides.md) — hecho 2026-11-17; infra compartida creada (skins.ts, selector, CSS); falta captura visual
+- [Skins serpentina](skins-serpentina.md) — hecho 2026-11-17; fruta retro en píxel; falta captura visual
+- [Skins ranaria](skins-ranaria.md) — hecho 2026-11-18; rana con contorno, barra de tiempo con carril oscuro; falta captura visual

@@ -1,0 +1,50 @@
+- generic [active] [ref=f46e1]:
+  - generic [ref=f46e2]:
+    - navigation [ref=f46e3]:
+      - link "ARCADE VAULT" [ref=f46e4] [cursor=pointer]:
+        - /url: /
+      - link "Iniciar Sesión" [ref=f46e7] [cursor=pointer]:
+        - /url: /auth
+      - button "Menú" [ref=f46e8] [cursor=pointer]: ≡
+    - complementary [ref=f46e9]:
+      - generic [ref=f46e10]: MENÚ
+      - link "Inicio" [ref=f46e11] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f46e12] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f46e13] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f46e14]: Acerca de
+      - link "Iniciar Sesión" [ref=f46e15] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f46e17]: CRÉDITOS · 03
+    - main [ref=f46e18]:
+      - generic [ref=f46e19]:
+        - generic [ref=f46e20]:
+          - generic [ref=f46e21]:
+            - generic [ref=f46e22]:
+              - generic [ref=f46e23]: Jugador
+              - generic [ref=f46e24]: INVITADO
+            - generic [ref=f46e25]:
+              - generic [ref=f46e26]: Puntuación
+              - generic [ref=f46e27]: "0"
+            - generic [ref=f46e28]:
+              - generic [ref=f46e29]: Nivel
+              - generic [ref=f46e30]: "01"
+          - generic [ref=f46e31]:
+            - button "PAUSA" [ref=f46e32] [cursor=pointer]
+            - button "FIN" [ref=f46e33] [cursor=pointer]
+            - link "REGRESAR" [ref=f46e34] [cursor=pointer]:
+              - /url: /juegos/caida
+        - img "Juego CAÍDA" [ref=f46e38]
+    - contentinfo [ref=f46e39]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - generic [ref=f46e44] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f46e45]
+    - generic [ref=f46e49]:
+      - button "Open issues overlay" [ref=f46e50]:
+        - generic [ref=f46e51]:
+          - generic [aria-hidden] [ref=f46e52]: "0"
+          - generic [ref=f46e53]: "1"
+        - generic [ref=f46e54]: Insight
+      - button "Collapse issues badge" [ref=f46e55]
+  - alert [ref=f46e58]

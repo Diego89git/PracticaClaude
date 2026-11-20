@@ -1,0 +1,17 @@
+[      93ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:720
+[     109ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:720
+[    9348ms] NotFoundError: Failed to execute 'setPointerCapture' on 'Element': No active pointer with the given id is found.
+    at pulsar (http://localhost:3000/_next/static/chunks/_1uhdyw3-poy3q._.js:942:25)
+    at onPointerDown (http://localhost:3000/_next/static/chunks/_1uhdyw3-poy3q._.js:967:33)
+    at executeDispatch (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:10214:13)
+    at runWithFiberInDEV (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:777:74)
+    at processDispatchQueue (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:10240:41)
+    at http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:10518:13
+    at batchedUpdates$1 (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:2066:44)
+    at dispatchEventForPluginEventSystem (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:10316:9)
+    at dispatchEvent (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:12975:37)
+    at dispatchDiscreteEvent (http://localhost:3000/_next/static/chunks/1daa_next_dist_compiled_react-dom_cjs_react-dom-client_development_0mp0cp_t-ezj9.js:12957:64)
+    at pd (eval at <anonymous> (eval at evaluate (:370:30)), <anonymous>:14:32)
+    at eval (eval at <anonymous> (eval at evaluate (:370:30)), <anonymous>:22:19)
+    at async eval (eval at evaluate (:370:30), <anonymous>:4:30)
+    at async <anonymous>:381:23

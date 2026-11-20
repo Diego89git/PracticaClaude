@@ -1,0 +1,33 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - navigation [ref=f11e3]:
+      - link "ARCADE VAULT" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+      - link "Iniciar Sesión" [ref=f11e7] [cursor=pointer]:
+        - /url: /auth
+      - button "Menú" [ref=f11e8] [cursor=pointer]: ≡
+    - complementary [ref=f11e9]:
+      - generic [ref=f11e10]: MENÚ
+      - link "Inicio" [ref=f11e11] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f11e12] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f11e13] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f11e14]: Acerca de
+      - link "Iniciar Sesión" [ref=f11e15] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f11e17]: CRÉDITOS · 03
+    - main [ref=f11e18]:
+      - generic [ref=f11e19]: CARGANDO JUEGO _
+    - contentinfo [ref=f11e21]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - generic [ref=f11e26] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f11e27]
+    - generic [ref=f11e31]:
+      - button "Open issues overlay" [ref=f11e32]:
+        - generic [ref=f11e33]:
+          - generic [aria-hidden] [ref=f11e34]: "0"
+          - generic [ref=f11e35]: "1"
+        - generic [ref=f11e36]: Insight
+      - button "Collapse issues badge" [ref=f11e37]
+  - alert [ref=f11e40]

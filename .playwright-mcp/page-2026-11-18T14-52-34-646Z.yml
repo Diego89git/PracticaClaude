@@ -1,0 +1,61 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e2]:
+    - navigation [ref=f7e3]:
+      - link "ARCADE VAULT" [ref=f7e4] [cursor=pointer]:
+        - /url: /
+      - link "Iniciar Sesión" [ref=f7e7] [cursor=pointer]:
+        - /url: /auth
+      - button "Menú" [ref=f7e8] [cursor=pointer]: ≡
+    - complementary [ref=f7e9]:
+      - generic [ref=f7e10]: MENÚ
+      - link "Inicio" [ref=f7e11] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f7e12] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f7e13] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f7e14]: Acerca de
+      - link "Iniciar Sesión" [ref=f7e15] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f7e17]: CRÉDITOS · 03
+    - main [ref=f7e18]:
+      - generic [ref=f7e19]:
+        - group "Apariencia del juego" [ref=f7e20]:
+          - generic [ref=f7e21]:
+            - button "CLÁSICO" [pressed] [ref=f7e22] [cursor=pointer]
+            - button "NEÓN" [ref=f7e23] [cursor=pointer]
+            - button "RETRO" [ref=f7e24] [cursor=pointer]
+          - generic [ref=f7e25]:
+            - button "CLARO" [ref=f7e26] [cursor=pointer]
+            - button "OSCURO" [pressed] [ref=f7e27] [cursor=pointer]
+        - generic [ref=f7e28]:
+          - generic [ref=f7e29]:
+            - generic [ref=f7e30]:
+              - generic [ref=f7e31]: Jugador
+              - generic [ref=f7e32]: INVITADO
+            - generic [ref=f7e33]:
+              - generic [ref=f7e34]: Puntuación
+              - generic [ref=f7e35]: "0"
+            - generic [ref=f7e36]:
+              - generic [ref=f7e37]: Vidas
+              - generic [ref=f7e38]: ♥ ♥ ♥
+            - generic [ref=f7e39]:
+              - generic [ref=f7e40]: Nivel
+              - generic [ref=f7e41]: "01"
+          - generic [ref=f7e42]:
+            - button "PAUSA" [ref=f7e43] [cursor=pointer]
+            - button "FIN" [ref=f7e44] [cursor=pointer]
+            - link "REGRESAR" [ref=f7e45] [cursor=pointer]:
+              - /url: /juegos/ranaria
+        - img "Juego FROGGER" [ref=f7e49]
+    - contentinfo [ref=f7e50]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - generic [ref=f7e55] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f7e56]
+    - generic [ref=f7e60]:
+      - button "Open issues overlay" [ref=f7e61]:
+        - generic [ref=f7e62]:
+          - generic [aria-hidden] [ref=f7e63]: "0"
+          - generic [ref=f7e64]: "1"
+        - generic [ref=f7e65]: Insight
+      - button "Collapse issues badge" [ref=f7e66]
+  - alert [ref=f7e69]

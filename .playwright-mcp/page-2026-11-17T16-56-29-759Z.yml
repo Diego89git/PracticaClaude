@@ -1,0 +1,66 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - navigation [ref=f4e3]:
+      - link "ARCADE VAULT" [ref=f4e4] [cursor=pointer]:
+        - /url: /
+      - link "Iniciar Sesión" [ref=f4e7] [cursor=pointer]:
+        - /url: /auth
+      - button "Menú" [ref=f4e8] [cursor=pointer]: ≡
+    - complementary [ref=f4e9]:
+      - generic [ref=f4e10]: MENÚ
+      - link "Inicio" [ref=f4e11] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f4e12] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f4e13] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f4e14]: Acerca de
+      - link "Iniciar Sesión" [ref=f4e15] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f4e17]: CRÉDITOS · 03
+    - main [ref=f4e18]:
+      - generic [ref=f4e19]:
+        - group "Apariencia del juego" [ref=f4e20]:
+          - generic [ref=f4e21]: SKIN
+          - generic [ref=f4e22]:
+            - button "CLÁSICO" [pressed] [ref=f4e23] [cursor=pointer]
+            - button "NEÓN" [ref=f4e24] [cursor=pointer]
+            - button "RETRO" [ref=f4e25] [cursor=pointer]
+          - generic [ref=f4e26]:
+            - button "CLARO" [ref=f4e27] [cursor=pointer]
+            - button "OSCURO" [pressed] [ref=f4e28] [cursor=pointer]
+        - generic [ref=f4e29]:
+          - generic [ref=f4e30]:
+            - generic [ref=f4e31]:
+              - generic [ref=f4e32]: Jugador
+              - generic [ref=f4e33]: INVITADO
+            - generic [ref=f4e34]:
+              - generic [ref=f4e35]: Puntuación
+              - generic [ref=f4e36]: "0"
+            - generic [ref=f4e37]:
+              - generic [ref=f4e38]: Vidas
+              - generic [ref=f4e39]: ♥ ♥ ♥
+            - generic [ref=f4e40]:
+              - generic [ref=f4e41]: Nivel
+              - generic [ref=f4e42]: "01"
+          - generic [ref=f4e43]:
+            - button "PAUSA" [ref=f4e44] [cursor=pointer]
+            - button "FIN" [ref=f4e45] [cursor=pointer]
+            - link "REGRESAR" [ref=f4e46] [cursor=pointer]:
+              - /url: /juegos/asteroides
+        - generic [ref=f4e48]:
+          - img "Juego ASTEROIDES" [ref=f4e50]
+          - generic [ref=f4e51]:
+            - generic [ref=f4e52]: SEÑAL OK
+            - generic [ref=f4e53]: ASTEROIDES · CRT-83 · 60 HZ
+    - contentinfo [ref=f4e54]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - generic [ref=f4e59] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=f4e60]
+    - generic [ref=f4e64]:
+      - button "Open issues overlay" [ref=f4e65]:
+        - generic [ref=f4e66]:
+          - generic [aria-hidden] [ref=f4e67]: "0"
+          - generic [ref=f4e68]: "1"
+        - generic [ref=f4e69]: Insight
+      - button "Collapse issues badge" [ref=f4e70]
+  - alert [ref=f4e73]

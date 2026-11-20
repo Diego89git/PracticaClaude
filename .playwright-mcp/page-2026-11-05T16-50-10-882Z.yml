@@ -1,0 +1,49 @@
+- generic [active] [ref=f32e1]:
+  - generic [ref=f32e2]:
+    - navigation [ref=f32e3]:
+      - link "ARCADE VAULT" [ref=f32e4] [cursor=pointer]:
+        - /url: /
+      - button "TESTER ▾" [ref=f32e7] [cursor=pointer]
+      - button "Menú" [ref=f32e8] [cursor=pointer]: ≡
+    - complementary [ref=f32e9]:
+      - generic [ref=f32e10]: MENÚ
+      - link "Inicio" [ref=f32e11] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f32e12] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f32e13] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f32e14]: Acerca de
+      - link "Cuenta" [ref=f32e15] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f32e17]: CRÉDITOS · 03
+    - main [ref=f32e18]:
+      - generic [ref=f32e19]:
+        - generic [ref=f32e20]:
+          - generic [ref=f32e21]:
+            - generic [ref=f32e22]:
+              - generic [ref=f32e23]: Jugador
+              - generic [ref=f32e24]: TESTER
+            - generic [ref=f32e25]:
+              - generic [ref=f32e26]: Puntuación
+              - generic [ref=f32e27]: "0"
+            - generic [ref=f32e28]:
+              - generic [ref=f32e29]: Vidas
+              - generic [ref=f32e30]: ♥ ♥ ♥
+            - generic [ref=f32e31]:
+              - generic [ref=f32e32]: Nivel
+              - generic [ref=f32e33]: "01"
+          - generic [ref=f32e34]:
+            - button "PAUSA" [ref=f32e35] [cursor=pointer]
+            - button "FIN" [ref=f32e36] [cursor=pointer]
+            - link "SALIR" [ref=f32e37] [cursor=pointer]:
+              - /url: /juegos/bloque-buster
+        - generic [ref=f32e38]:
+          - img "Juego BLOQUE BUSTER" [ref=f32e40]
+          - generic [ref=f32e41]:
+            - generic [ref=f32e42]: SEÑAL OK
+            - generic [ref=f32e43]: BLOQUE BUSTER · CRT-83 · 60 HZ
+            - generic [ref=f32e44]: CARGA · 1MB
+    - contentinfo [ref=f32e45]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - button "Open Next.js Dev Tools" [ref=f32e51] [cursor=pointer]
+  - alert [ref=f32e55]

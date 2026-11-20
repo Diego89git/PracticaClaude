@@ -1,0 +1,118 @@
+- generic [active] [ref=f11e1]:
+  - generic [ref=f11e2]:
+    - navigation [ref=f11e3]:
+      - link "ARCADE VAULT" [ref=f11e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f11e7]:
+        - link "Inicio" [ref=f11e8] [cursor=pointer]:
+          - /url: /
+        - link "Biblioteca" [ref=f11e9] [cursor=pointer]:
+          - /url: /biblioteca
+        - link "Salón de la Fama" [ref=f11e10] [cursor=pointer]:
+          - /url: /salon
+        - generic "Próximamente" [ref=f11e11]: Acerca de
+      - generic [ref=f11e12]: CRÉDITOS · 03
+      - button "TESTER ▾" [ref=f11e15] [cursor=pointer]
+    - complementary [ref=f11e16]:
+      - generic [ref=f11e17]: MENÚ
+      - link "Inicio" [ref=f11e18] [cursor=pointer]:
+        - /url: /
+      - link "Biblioteca" [ref=f11e19] [cursor=pointer]:
+        - /url: /biblioteca
+      - link "Salón de la Fama" [ref=f11e20] [cursor=pointer]:
+        - /url: /salon
+      - generic "Próximamente" [ref=f11e21]: Acerca de
+      - link "Cuenta" [ref=f11e22] [cursor=pointer]:
+        - /url: /auth
+      - generic [ref=f11e24]: CRÉDITOS · 03
+    - main [ref=f11e25]:
+      - generic [ref=f11e26]:
+        - generic [ref=f11e30]:
+          - generic [ref=f11e31]:
+            - generic [ref=f11e32]: PUZZLE
+            - generic [ref=f11e33]: 1 JUGADOR
+            - generic [ref=f11e34]: TECLADO / TÁCTIL
+            - generic [ref=f11e35]: RETRO 1985
+          - heading "CAÍDA" [level=2] [ref=f11e36]
+          - paragraph [ref=f11e37]: Piezas geométricas descienden desde la oscuridad. Rótalas, encástralas y limpia líneas para sobrevivir. La velocidad aumenta sin piedad cada 10 líneas.
+          - generic [ref=f11e38]:
+            - generic [ref=f11e39]:
+              - generic [ref=f11e40]: Partidas
+              - generic [ref=f11e41]: "0"
+            - generic [ref=f11e42]:
+              - generic [ref=f11e43]: Mejor global
+              - generic [ref=f11e44]: "0"
+            - generic [ref=f11e45]:
+              - generic [ref=f11e46]: Dificultad
+              - generic [ref=f11e47]: ★ ★ ★ ☆ ☆
+          - generic [ref=f11e48]:
+            - link "▶ JUGAR AHORA" [ref=f11e49] [cursor=pointer]:
+              - /url: /jugar/caida
+            - link "VOLVER AL VAULT" [ref=f11e50] [cursor=pointer]:
+              - /url: /biblioteca
+        - complementary [ref=f11e51]:
+          - generic [ref=f11e52]:
+            - heading "MEJORES PUNTUACIONES" [level=3] [ref=f11e53]
+            - generic [ref=f11e54]:
+              - generic [ref=f11e55]: "#01"
+              - generic [ref=f11e56]:
+                - text: ARKADYA
+                - generic [ref=f11e57]: 19/12/2026
+              - generic [ref=f11e58]: "278.417"
+            - generic [ref=f11e59]:
+              - generic [ref=f11e60]: "#02"
+              - generic [ref=f11e61]:
+                - text: MAGENTA88
+                - generic [ref=f11e62]: 14/11/2026
+              - generic [ref=f11e63]: "245.157"
+            - generic [ref=f11e64]:
+              - generic [ref=f11e65]: "#03"
+              - generic [ref=f11e66]:
+                - text: VECTORX
+                - generic [ref=f11e67]: 19/07/2026
+              - generic [ref=f11e68]: "179.637"
+            - generic [ref=f11e69]:
+              - generic [ref=f11e70]: "#04"
+              - generic [ref=f11e71]:
+                - text: NEONFOX
+                - generic [ref=f11e72]: 01/08/2026
+              - generic [ref=f11e73]: "177.844"
+            - generic [ref=f11e74]:
+              - generic [ref=f11e75]: "#05"
+              - generic [ref=f11e76]:
+                - text: DROID_X
+                - generic [ref=f11e77]: 19/02/2026
+              - generic [ref=f11e78]: "117.367"
+            - generic [ref=f11e79]:
+              - generic [ref=f11e80]: "#06"
+              - generic [ref=f11e81]:
+                - text: PIXEL_DAD
+                - generic [ref=f11e82]: 21/03/2026
+              - generic [ref=f11e83]: "95.046"
+            - generic [ref=f11e84]:
+              - generic [ref=f11e85]: "#07"
+              - generic [ref=f11e86]:
+                - text: BIT_LORD
+                - generic [ref=f11e87]: 01/03/2026
+              - generic [ref=f11e88]: "52.806"
+            - generic [ref=f11e89]:
+              - generic [ref=f11e90]: "#08"
+              - generic [ref=f11e91]:
+                - text: SCANLINE
+                - generic [ref=f11e92]: 14/03/2026
+              - generic [ref=f11e93]: "41.242"
+            - generic [ref=f11e94]:
+              - generic [ref=f11e95]: "#09"
+              - generic [ref=f11e96]:
+                - text: RGB_QUEEN
+                - generic [ref=f11e97]: 28/07/2026
+              - generic [ref=f11e98]: "39.706"
+            - generic [ref=f11e99]:
+              - generic [ref=f11e100]: "#10"
+              - generic [ref=f11e101]:
+                - text: M00NRYU
+                - generic [ref=f11e102]: 10/04/2026
+              - generic [ref=f11e103]: "21.307"
+    - contentinfo [ref=f11e104]: © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+  - button "Open Next.js Dev Tools" [ref=f11e110] [cursor=pointer]
+  - alert [ref=f11e114]
