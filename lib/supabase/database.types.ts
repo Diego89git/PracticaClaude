@@ -87,7 +87,10 @@ export type Database = {
       [_ in never]: never;
     };
     Functions: {
-      [_ in never]: never;
+      renombrar_scores: {
+        Args: { anterior: string; nuevo: string };
+        Returns: number;
+      };
     };
     Enums: {
       [_ in never]: never;
