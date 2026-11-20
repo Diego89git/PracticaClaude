@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { connection } from "next/server";
 import type { Database } from "./database.types";
 
 // Crear un cliente nuevo por petición: no reutilizar entre peticiones.
@@ -12,6 +13,11 @@ export async function createClient() {
     throw new Error("Falta la variable NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY");
   }
 
+  // SPEC 24: con sesión, supabase-js llama a Date.now() para ver si el token
+  // caducó. Con partialPrefetching, las rutas que leen cookies() se prerenderizan
+  // por sesión y ahí Date.now() es un error. connection() deja estas lecturas
+  // solo para la petición real (el <Suspense> de cada página muestra su fallback).
+  await connection();
   const cookieStore = await cookies();
 
   return createServerClient<Database>(url, key, {

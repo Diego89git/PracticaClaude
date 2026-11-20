@@ -42,10 +42,10 @@ export function GamePlayer({ game }: { game: Juego }) {
   const { skin, modo, setSkin, setModo } = useSkin(conSkins);
   const name = typedName ?? user?.name ?? "INVITADO";
 
-  // Fin de partida (FIN o game over). En juegos reales el nombre se pre-rellena
-  // con el último usado en el leaderboard.
+  // Fin de partida (FIN o game over). En juegos reales el nombre se pre-rellena:
+  // con sesión, con el username (SPEC 24); sin sesión, con el último usado.
   const finish = () => {
-    if (real && typedName === null) {
+    if (real && typedName === null && !user?.name) {
       const stored = readPlayerName();
       if (stored) setTypedName(stored.toUpperCase().slice(0, 10));
     }
@@ -65,16 +65,21 @@ export function GamePlayer({ game }: { game: Juego }) {
     }
     setSaving(true);
     setSaveError(false);
+    // av_player_name solo recuerda el nombre del invitado.
+    if (!user) {
+      try {
+        localStorage.setItem(PLAYER_NAME_KEY, playerName);
+      } catch {}
+    }
     try {
-      localStorage.setItem(PLAYER_NAME_KEY, playerName);
-    } catch {}
-    try {
-      const { error } = await createClient().from("scores").insert({
-        game_id: game.id,
-        player_name: playerName,
-        score,
-        user_id: null,
-      });
+      const { error } = await createClient()
+        .from("scores")
+        .insert({
+          game_id: game.id,
+          player_name: playerName,
+          score,
+          user_id: user?.id ?? null,
+        });
       if (error) throw error;
       saveScore({ game: game.id, score, name: playerName });
       setSaved(true);
